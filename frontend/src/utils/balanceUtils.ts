@@ -1,7 +1,7 @@
 import { Connection, PublicKey } from "@solana/web3.js";
 
 // Solana balance fetching
-const SOLANA_RPC = process.env.SOLANA_RPC || "";
+const SOLANA_RPC = import.meta.env.SOLANA_RPC || "";
 
 export const fetchSolanaBalance = async (address: string): Promise<number> => {
   try {
@@ -16,7 +16,7 @@ export const fetchSolanaBalance = async (address: string): Promise<number> => {
 };
 
 // Ethereum balance fetching
-const ETH_RPC = process.env.ETH_RPC || "";
+const ETH_RPC = import.meta.env.ETH_RPC || "";
 
 export const fetchEthereumBalance = async (
   address: string
